@@ -1,9 +1,8 @@
 package = "kong-plugin-oidc"
 version = "1.4.0-1"
 source = {
-    url = "git://github.com/revomatico/kong-oidc",
-    tag = "master",
-    dir = "kong-oidc"
+    url = "git://github.com/revomatico/kong-oidc.git",
+    tag = "master"
 }
 description = {
     summary = "A Kong plugin for implementing the OpenID Connect Relying Party (RP) functionality",
@@ -27,10 +26,10 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-    ["kong.plugins.oidc.filter"] = "kong/plugins/oidc/filter.lua",
-    ["kong.plugins.oidc.handler"] = "kong/plugins/oidc/handler.lua",
-    ["kong.plugins.oidc.schema"] = "kong/plugins/oidc/schema.lua",
-    ["kong.plugins.oidc.session"] = "kong/plugins/oidc/session.lua",
-    ["kong.plugins.oidc.utils"] = "kong/plugins/oidc/utils.lua"
+        ["kong.plugins.oidc.filter"]  = "kong/plugins/oidc/filter.lua",
+        ["kong.plugins.oidc.handler"] = "kong/plugins/oidc/handler.lua",
+        ["kong.plugins.oidc.schema"]  = "kong/plugins/oidc/schema.lua",
+        ["kong.plugins.oidc.session"] = "kong/plugins/oidc/session.lua",
+        ["kong.plugins.oidc.utils"]   = "kong/plugins/oidc/utils.lua"
     }
 }
